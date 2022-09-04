@@ -1,0 +1,69 @@
+/*폰트*/
+@font-face {
+    src : url("../fonts/GowunDodum-Regular.ttf");
+    font-family: "Gowun Dodum"
+}
+
+@font-face {
+    src : url("../fonts/Jua-Regular.ttf");
+    font-family: "Jua"
+}
+/*전체 폰트 적용(fontawesome은 제외)*/
+*:not(i){
+  font-family:"Gowun Dodum","Jua";
+}
+
+ /* nav */
+.navbar-brand {
+    margin-left: 5%;
+}
+
+.nav-item {
+    margin-right: 35px;
+}
+
+.fa-solid.fa-shield-dog {
+    margin-right: 5px;
+
+}
+
+.contents {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.button {
+    justify-content: center;
+}
+
+
+.sample-label {
+    width: 40%;
+    height: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+    background-color: #F7F6DC;
+    border-radius: 15px;
+    cursor:default;
+    font-size: 1em;
+}
+
+.sample-image {
+    width: 200px;
+    height: 200px;
+}
+.col-md-6 {
+    margin-top: 10px;
+}
+
+.form-control {
+    margin-left: 100px;
+    width: 75%;
+}
+
