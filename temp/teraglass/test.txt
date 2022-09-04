@@ -1,4 +1,0 @@
-issue and pr test용
-it's a test
-branch 삭제 후 다시 커밋해봄
-링크 대신 # 이용해서 커밋 메시지 작성 test
