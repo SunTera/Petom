@@ -61,6 +61,6 @@
 
 | 이름                                       | 역할                    |
 | ------------------------------------------ | ----------------------- |
-| [홍유리](https://github.com/teraglass)(PM) | 백엔드(Flask, Firebase) |
+| [홍유리](https://github.com/teraglass)(PM) | 백엔드(Flask) |
 | [김예은](https://github.com/kimyeun)       | AI모델개발               |
 | [양지선](https://github.com/Sunnnyyy16)    | 데이터분석               |
