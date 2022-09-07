@@ -2,10 +2,11 @@
 .xml
 .idea/
 
-#images
-static/images/*
-results/*
+# images
+upload/*
+static/results/*
 yolov5/results/*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
