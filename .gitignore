@@ -1,6 +1,11 @@
 .DS_Store
 .xml
-/.idea
+.idea/
+
+#images
+static/images/*
+results/*
+yolov5/results/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
