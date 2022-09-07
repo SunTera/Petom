@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'petom-test'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D155DCE10CC24C28824B45F31B01EB0D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7425823BDA9E4A5C96830B9577C50ED0 }}
