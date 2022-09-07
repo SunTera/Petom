@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"
+            integrity="sha256-00Fh8tkPAe+EmVaHFpD+HovxWk7b97qwqVi7nLvjdgs="
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/style.css"/>
     <title>증상탐지</title>
 
     </script>
-    <div class="grid text-center">
+    <div class="grid text-center" >
         <div class="row">
             <div class="col">
                 <p></p>
-                <p>이미지 파일만 업로드 가능합니다</p>
-                <p>샘플 이미지를 클릭하시면 이미지가 다운로드 됩니다</p>
-                <p>업로드된 이미지는 저장되지 않습니다</p>
+                <p>이미지 파일만 업로드가 가능합니다</p>
+                <p>샘플 이미지를 클릭하시면 샘플 이미지가 다운로드 됩니다</p>
+                <p>업로드된 이미지와 결과 이미지는 저장되지 않습니다</p>
             </div>
         </div>
 
-        <div class="row" >
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6" >
                 <label class="sample-label">미란∙궤양 샘플</label>
                 <br>
                 <a href="/static/images/erosion_ulcer_sample1.jpg" download="erosion_ulcer_sample1.jpg"
@@ -40,32 +42,38 @@
                    title="nodule_tumor_sample2"><img class="sample-image img-fluid rounded"
                                                      src="/static/images/nodule_tumor_sample2.jpg"
                                                      alt="결절_샘플2"></a>
-
-
             </div>
             <div class="col-md-6">
                 <form name="frm" action="/detect" method="POST" enctype="multipart/form-data">
-                    <p>탐지할 파일을 선택하세요</p>
-                    <input class="form-control" type="file" id="imgUpload" name="file" id="formFile" onchange="readURL(this);">
+                    <p>증상을 탐지할 파일을 선택해주세요</p>
+                    <input class="form-control" type="file" id="imgUpload" name="file" id="formFile"
+                           onchange="readURL(this);">
                     <br>
-                    <img id="preview" />
+                    <img id="preview"/>
                     <br>
-                    <br>
-                    <button type="submit" class="btn btn-danger">SUBMIT</button>
-
-
+                    <button type="submit" id="submit" class="btn btn-danger submit-btn">SUBMIT</button>
                 </form>
-
+                <div id="process"></div>
             </div>
 
 
         </div>
     </div>
     <script defer src="/static/js/upload.js"></script>
-    <script>
+    <!-- Loading 화면 코드 시작 -->
 
+
+
+    <script type="text/javascript">
+
+        $("#submit").click(function () {
+            $("#process").text("탐지중...")
+            $("#process").after('<div id="load"><img src="/static/images/loading_icon.gif"></div>')
+
+        });
 
 
     </script>
+    <!-- Loading 화면 코드 종료-->
 
 {% endblock %}

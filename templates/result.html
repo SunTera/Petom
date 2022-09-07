@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>Result</title>
 
-<div class="row" style="text-align: center;">
+    <div class="row">
 
-        <div class="row" style="height: 450px; border: indianred 1px solid ">
-            <div class="col-md-8" style="border: cornflowerblue 1px solid">Result Image</div>
-            <div class="col-md-4">Result Explanation</div>
+        <div class="row" >
+            <div class="col-md-6" >
+                <p class="result-p">탐지 결과</p>
+                <img class="result-img" src="/static/results/{{ filename }}" alt="결과"></div>
+
+            <div class="col-md-6">Result Explanation</div>
         </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-6">Information</div>
 
+    </div>
 {% endblock %}
