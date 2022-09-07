@@ -3,16 +3,54 @@
 
     <meta charset="UTF-8">
     <title>Result</title>
+    <div class="grid ">
 
-    <div class="row">
+        <div class="row">
+            <div class="col text-center">
+                <p>📍 바운딩 박스 형태 : 증상명 + 숫자
+                    <br>📍 숫자는 Confidence로 확률을 의미하며 0부터 1 미만의 값을 가집니다
+                    <br>📍 탐지가 되지 않았어요 ➡️ Petom은 confidence 값이 0.4 이상인 경우에만 박스가 표시됩니다</p>
+                <p>예: erosion_ulcer 0.69 ➡️ 69%의 확률로 미란∙궤양 증상이라는 의미입니다.</p>
 
-        <div class="row" >
-            <div class="col-md-6" >
-                <p class="result-p">탐지 결과</p>
-                <img class="result-img" src="/static/results/{{ filename }}" alt="결과"></div>
-
-            <div class="col-md-6">Result Explanation</div>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-6 result-col">
+                <p class="result-left">탐지 결과</p>
+                <img class="result-img" src="/static/results/{{ filename }}" alt="결과"></div>
+            <div class="col-md-6 result-explanation">
+                <p class="result-right">결과 설명</p>
+                <img class="result-sample-img" src="/static/images/result_sample_eu.png" title="미란∙궤양 결과 샘플">
+                <p class="paragraph"><strong>Erosion(미란)</strong> : 피부의 표층에 국한되는 조직결손을 말한다. 치유후에 흉터를 남기지 않고 완전히 치유가 된다.
+                    표피까지
+                    얕은 수준의 궤양을 말하며 반흔을 남기지 않는다. 고름딱지나 물집이 터진 후 표피만 떨어져 나가 생기며 이곳은 딱지가 형성되거나 형성되지 않을 수도 있으나 흉터없이 치유된다.
+                    <a href="http://www.kmle.co.kr/ebook_terminology_view.php?Num=625&Md=df2b823da96ba24548e102528f460dd5&TitleLetter=%B9%CC%B6%F5%3A+erosion"
+                       target="_blank">출처<i class="bi bi-box-arrow-up-right"></i></a></p>
+                <p class="paragraph"><strong>Ulcer(궤양)</strong> : 염증, 괴사로 인해 상피가 탈락하여 조직표면이 국소적으로 결손되거나 함몰된 것을 의미한다.
+                    궤양은 조직의 염증이 진행되어 발생하거나 조직으로의 산소 및 영양분의 공급이 원활하게 이루어지지 못해 발생하게 된다.
+                    <a href="https://ko.wikipedia.org/wiki/%EA%B6%A4%EC%96%91" target="_blank">출처<i
+                            class="bi bi-box-arrow-up-right"></i></a>
+                </p>
+
+                <img class="result-sample-img" src="/static/images/result_sample_nt.png" title="결정∙종괴 결과 샘플">
+                <p class="paragraph"><strong>Nodule(결절) </strong> : 피부 안쪽이나 밑에 딱딱하고 솟아오른 조직이나 유체로, 지름은 0.5 센티미터를 초과한다.
+                    결절은 상해를 입을 경우 힘줄이나 근육에 형성될 수 있다. 결절은 일반적으로 양성에 속하며 대부분 무통이지만 장기의 기능에 영향을 줄 수 있다.
+                    <a href="https://ko.wikipedia.org/wiki/%EA%B2%B0%EC%A0%88" target="_blank">출처<i
+                            class="bi bi-box-arrow-up-right"></i></a>
+                </p>
+
+                <p class="paragraph"><strong>Tumor(종괴) </strong>: 종괴는 결절보다 큰 혹을 표현하는 말이다. 종괴는 덩이나 멍울, 혹이란 말로 혼용된다.
+                    혹이 염증이 뭉친 경우가 아니라, 세포가 자라서 혹이 된 경우 라면 종양이란 표현을 쓴다.
+                    세포가 얌전하게 자라고 몸에 문제를 끼치지 않으면 양성종양, 거침없이 자라서 여기저기 퍼지면 악성종양 즉 암이다.
+                    종괴와 결절을 칼로 베듯 구분하는 명확한 기준은 없다. 다만 각 장기의 원래 크기에 비추어 가늠하기도 한다.
+                    예를 들어 피부결절은 1cm보다 작을 때, 폐에 생기는 결절은 3cm보다 작을 때 등이다.
+                    <a href="https://m.health.chosun.com/svc/news_view.html?contid=2016032901070" target="_blank">출처<i
+                            class="bi bi-box-arrow-up-right"></i></a>
+                </p>
+            </div>
+
+        </div>
     </div>
+
 {% endblock %}

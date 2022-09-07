@@ -11,7 +11,10 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/2fea303ea5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <!-- favicon -->
     <link rel="icon" href="/static/images/favicon.svg"></link>
     <!-- 구글 폰트 -->
@@ -23,10 +26,11 @@
     <title>Petom</title>
 
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light">
+
+<div id="process"></div>
+<header class="navbar navbar-expand-lg navbar-light" id="nav">
     <div class="container-fluid ">
-        <a class="navbar-brand " href="/"><i class="fa-solid fa-shield-dog" style="font-family: 'Font Awesome 6 Free';"></i>PETOM</a>
+        <a class="navbar-brand " href="/"><i class="fa-solid fa-shield-dog"></i>PETOM</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +38,7 @@
         <div class="navbar collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="about">About</a>
+                    <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="detect">증상탐지</a>
@@ -43,13 +47,19 @@
                     <a class="nav-link" href="result">결과(임시)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="search_vet">병원검색</a>
-                </li>
+                    <a class="nav-link" href="hospital" id="hospital" onclick="loading()">병원지도</a>
                 </li>
             </ul>
         </div>
     </div>
-</nav>
+    <script>
+    </script>
+</header>
+
+<body>
 {% block content %}{% endblock %}
 </body>
+
+<script defer src="/static/js/loading.js"></script>
+
 </html>

@@ -9,6 +9,10 @@
     font-family: "Jua"
 }
 
+body {
+    font-size: 14pt;
+}
+
 /*전체 폰트 적용(fontawesome은 제외)*/
 *:not(i) {
     font-family: "Gowun Dodum", "Jua";
@@ -16,11 +20,11 @@
 
 /* nav */
 .navbar-brand {
-    margin-left: 5%;
+    margin-left: 4.2%;
 }
 
 .nav-item {
-    margin-right: 35px;
+    margin-right: 50px;
 }
 
 .fa-solid.fa-shield-dog {
@@ -28,6 +32,36 @@
 
 }
 
+/* about 페이지 */
+#aboutNav {
+    padding: 0;
+    background-color: white;
+    box-shadow: inset 0px 1px 0px #F7F7F8;
+
+}
+
+
+.top-button {
+    position: fixed;
+    bottom: 11%;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.down-button {
+    position: fixed;
+    bottom: 5%;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/*content*/
 .contents {
     margin: 30px auto;
     text-align: center;
@@ -45,8 +79,9 @@
 
 
 .sample-label {
+    margin-top: 2%;
     width: 40%;
-    height: 5%;
+    height: 6%;
     margin-bottom: 2%;
     text-align: center;
     background-color: #F7F6DC;
@@ -55,13 +90,22 @@
     font-size: 1em;
 }
 
+.sample-label.right {
+    margin-top: 2%;
+    width: 60%;
+    height: 6%;
+    margin-bottom: 2%;
+    text-align: center;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    cursor: default;
+
+}
+
 .sample-image {
     width: 200px;
     height: 200px;
-}
-
-.col-md-6 {
-    margin-top: 10px;
+    margin-right: 2%;
 }
 
 .form-control {
@@ -74,13 +118,8 @@
     display: inline-block;
 }
 
-.col-md-6 {
+.col-md-6.detect, .col-md-6.result-col {
     text-align: center;
-}
-
-.result-img {
-    width: 500px;
-    height: 500px;
 }
 
 /*로딩 화면*/
@@ -92,6 +131,7 @@
     opacity: 0.8;
     background: white;
     position: fixed;
+    text-align: center;
     z-index: 1000; /* 이 값으로 레이어의 위치를 조정합니다. */
 
 }
@@ -99,4 +139,59 @@
 #load > img {
     top: 50%;
     left: 50%;
+}
+
+/*logo*/
+.bi.bi-arrow-up-right, .bi.bi-box-arrow-up-right {
+    font-size: 0.7rem;
+    vertical-align: .425em;
+    margin-left: 0.1rem
+}
+
+
+.giphy-logo {
+    vertical-align: .03em;
+    width: 16px;
+}
+/*result page*/
+.result-img {
+    width: 580px;
+    height: 580px;
+}
+
+.result-left {
+    width: 50%;
+    text-align: center;
+    background-color: #F7F6DC;
+    border-radius: 15px;
+    margin: 0 auto 2%;
+
+}
+
+.result-right {
+    width: 50%;
+    text-align: center;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    margin: 0 auto 2%;
+
+
+}
+
+.result-sample-img {
+    width: 105px;
+    height: 118px;
+    float: left;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.paragraph {
+    margin-right: 10%;
+}
+
+.paragraph a {
+    text-decoration: none;
+    color: #969EA0;
+    float: right;
 }
