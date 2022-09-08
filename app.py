@@ -1,17 +1,13 @@
-import datetime
-import os
-import shutil
-
-from flask import Flask, render_template, request, url_for
-from werkzeug.utils import secure_filename, redirect
+import base64
+import io
+import torch
+from PIL import Image
+from flask import Flask, render_template, request
 import requests, json
 
-import config
-
 app = Flask(__name__, static_url_path='/static')
-UPLOAD_FOLDER = config.UPLOAD_FOLDER
-RESULT_FOLDER = config.RESULT_FOLDER
-STATIC_RESULT_FOLDER = config.STATIC_RESULT_FOLDER
+
+model = torch.hub.load('yolov5', 'custom', path='yolov5/petom_weights.pt', source='local')  # local repo
 
 
 @app.route('/')
@@ -30,33 +26,35 @@ def detect():
         if 'file' not in request.files:
             return 'File is missing', 404
 
-        file = request.files['file']
+        im_file = request.files['file']
 
-        if file.filename == '':
+        if im_file.filename == '':
             return 'File is missing', 404
 
-        filename = secure_filename(file.filename)
-        file_route = os.path.join(UPLOAD_FOLDER, filename)
-        file.save(file_route)
-        # detect #
-        detect_result = os.system(
-            f'python ./yolov5/detect.py --weights ./yolov5/petom_weights.pt --img 640 --conf 0.4 --source "{file_route}"')
-        if detect_result == 0:
-            result_img = os.path.join(RESULT_FOLDER, filename)
-            shutil.copyfile(result_img, os.path.join(STATIC_RESULT_FOLDER, filename))
-            # os.system(f'rm "{result_img}" "{file_route}"') # 자동화로 해결하면 삭제
-            return redirect(url_for('result', filename=filename))
+        im_bytes = im_file.read()
+        img = Image.open(io.BytesIO(im_bytes))
+
+        results = model(img)  # inference
+
+        results.ims  # array of original images (as np array) passed to model for inference
+        results.render()  # updates results.imgs with boxes and labels
+        for img in results.ims:  # 'JpegImageFile' -> bytes-like object
+            buffered = io.BytesIO()
+            img_base64 = Image.fromarray(img)
+            img_base64.save(buffered, format="JPEG")
+            encoded_img_data = base64.b64encode(buffered.getvalue()).decode(
+                'utf-8')  # base64 encoded image with results
+            return render_template('result.html', img_data=encoded_img_data)
         else:
             return 'Sorry, Detection was not handled properly', 404
 
     else:
         return render_template("detect.html")
 
-
+############## 임시 ################
 @app.route("/result")
 def result():
-    filename = request.args.get('filename')
-    return render_template("result.html", filename=filename)
+    return render_template("result.html")
 
 
 def current_location():
@@ -78,4 +76,4 @@ def hospital():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5000)

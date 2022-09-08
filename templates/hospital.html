@@ -3,24 +3,18 @@
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.5.*/dist/index.js'></script>
     <link rel="stylesheet" href="/static/css/style.css">
-    <style>
-        #deck-container {
-            margin: 0 auto 1%;
-            width: 90vw;
-            height: 80vh;
-        }
-    </style>
+
     <input type="hidden" id="lat" value="{{ lat }}">
     <input type="hidden" id="lng" value="{{ lng }}">
+
     <div class="grid text-center">
         <div class="row">
             <div class="col">
-                <p>사용자의 위치 정보는 저장되지 않습니다</p>
-                <p>지역번호가 포함되지 않은 전화번호가 있습니다</p>
-                <p>주소의 시와 지역번호를 확인하셔야 정확한 전화번호를 확인하실 수 있습니다</p>
+                <p>📍 사용자의 위치 정보는 저장되지 않습니다</p>
+                <p>📍 uploa지역번호가 포함되지 않은 전화번호가 표시될 수 있습니다</p>
+                <p>🐾 주소의 시와 지역번호를 확인하셔야 정확한 전화번호를 확인하실 수 있습니다</p>
             </div>
         </div>
     </div>
