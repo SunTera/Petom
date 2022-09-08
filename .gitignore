@@ -2,12 +2,6 @@
 .xml
 .idea/
 
-# images
-upload/*
-static/results/*
-yolov5/results/*
-
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
