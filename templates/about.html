@@ -5,12 +5,12 @@
     <title>About</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/about.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <noscript>
         <link rel="stylesheet" href="/static/css/noscript.css"/>
     </noscript>
-        <script src="https://kit.fontawesome.com/2fea303ea5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2fea303ea5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <div id="process"></div>
@@ -21,16 +21,16 @@
             <div class="navbar collapse navbar-collapse justify-content-center">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#header">Petom</a>
+                        <a class="nav-link" href="#header"><strong>PETOM</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#one">Yolov5</a>
+                        <a class="nav-link" href="#one"><strong>YOLOv5</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#two">기대효과</a>
+                        <a class="nav-link" href="#two"><strong>기대효과</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#three">메뉴설명</a>
+                        <a class="nav-link" href="#three"><strong>페이지구성</strong></a>
                     </li>
                     </li>
                 </ul>
@@ -40,9 +40,14 @@
     <!-- Header -->
     <section id="header">
         <div class="inner">
-            <h1><strong>PETOM</strong></h1><br>
-            <h4>Pet + 피부 질환의 증상 탐(tom)지</h4>
-            <p>AI로 반려동물의 피부 질환 증상을 탐지해보세요</p>
+            <img src="/static/images/favicon.svg" width="10%" height="10%" style="margin-bottom: 3%">
+
+            <h1><strong>PETOM</strong>을 소개합니다<br>
+                Pet + 피부 질환의 증상 탐(tom)지</h1>
+            <p>AI로 반려동물의 피부 질환 증상을 탐지해보세요<br>
+                빠른 이미지 분석 모델인 YOLOv5을 이용하여 미란∙궤양, 결정∙종괴 증상을 탐지합니다</p>
+            <p></p>
+
         </div>
     </section>
 
@@ -55,8 +60,10 @@
                         <h2><strong>YOLOv5</strong></h2><br>
                         <h4>You Only Look Once</h4>
                     </header>
-                    <p>YOLO는 이미지 전체를 한 번만 보고 탐지를 수행하여 다른 탐지모델(Object Detection Algorithm)과 비교했을 때 매우 빠른 처리속도를 가지고 있습니다.</p>
-                    <p>다양한 버전 중 2020년 06월에 출시된 Pytorch 기반의 YOLOv5는 이전 버전과 비교하여 쉽게 환경 구성이 가능하고 빠르게 구현이 가능한 장점이 있어 PETOM에서 사용합니다.</p>
+                    <p>YOLO는 이미지 전체를 한 번만 보고 탐지를 수행하여 다른 탐지모델(Object Detection Algorithm)과 비교했을 때 매우 빠른 처리 속도를 가지고
+                        있습니다.</p>
+                    <p>다양한 버전 중 2020년 6월에 출시된 Pytorch 기반의 YOLOv5는 이전 버전과 비교하여 쉽게 환경 구성이 가능하고 빠르게 구현이 가능한 장점이 있어 PETOM에서
+                        사용합니다.</p>
 
                     🚀<a class="yolov5 icon-external right" href="https://github.com/ultralytics/yolov5"
                          target="_blank">
@@ -75,15 +82,17 @@
         <div class="container">
             <div class="row gtr-150">
                 <div class="col-6 col-12-medium">
-                    <img src="" alt="사진">
+                    <img src="/static/images/dog-skin.jpeg" width="525" height="435" alt="" title="https://wagwalking.com/condition/abnormal-skin-formation"
+                    style="border-radius: 25px">
                 </div>
                 <div class="col-6 col-12-medium">
                     <header class="major">
                         <h2><strong>기대효과</strong></h2><br>
-                        <h4>기대효과와 한계점</h4>
+                        <h4>반려동물을 위한 AI </h4>
                     </header>
-                    <p>Yolov5는 작은 물체(object) 탐지 정확도가 떨어져 제한적인 피부질환만 탐지 가능한 단점이 있으나 추후 모델을 개선한다면 다양한 종류의 피부질환 탐지 및 정확도 개선이 기대됩니다.</p>
-                    <p>반려동물 피부질환을 보호자가 예비진단 할 수 있어 치료기관 방문 유무의 기준이 될 수 있습니다.</p>
+                    <p>Yolov5는 작은 물체(object) 탐지 정확도가 떨어져 제한적인 피부질환만 탐지할 수 있는 단점이 있으나 추후 모델을 개선한다면 다양한 종류의 피부질환 탐지 및 정확도
+                        개선이 기대됩니다.</p>
+                    <p>반려동물 피부질환을 보호자가 예비진단을 할 수 있어 치료기관 방문 여부의 기준이 될 수 있습니다.</p>
                     <p>추후 모델 개선 및 다양한 기기에서 촬영한 이미지로 학습 시 전문 의료인의 진단을 보조하는 서비스로 확장이 기대됩니다.</p>
                 </div>
             </div>
@@ -94,12 +103,13 @@
     <section id="three" class="main style1 special">
         <div class="container">
             <header class="major">
-                <h2>페이지 구성</h2>
+                <h2><strong>페이지 구성</strong></h2>
             </header>
-            <p>Petom의 페이지는 이렇게 이루어져 있습니다.</p>
+            <p><strong>PETOM</strong>의 페이지는 이렇게 이루어져 있습니다.</p>
             <div class="row gtr-150">
                 <div class="col-3 col-12-medium">
-                    <span class="image fit"><img src="/static/images/loading_icon.gif" alt="running cat.gif" height="137" ></span>
+                    <span class="image fit"><img src="/static/images/loading_icon.gif" alt="running cat.gif"
+                                                 height="137"></span>
                     <h3>로딩 이미지</h3>
                     from <img class="giphy-logo" src="/static/images/giphy-logo.svg" width="16">Giphy
                     <a href="https://giphy.com/gifs/hoppip-cat-hoppip-D5GyCFkInbJlu" target="_blank" class="button">
@@ -109,7 +119,7 @@
                 </div>
                 <div class="col-3 col-12-medium">
                     <span class="image fit"><img src="/static/images/detect_page.jpeg" height="137" alt=""></span>
-                    <h3>증상 탐지<a href="detect" class="button"><i class="bi bi-box-arrow-in-right"></i></a></h3>
+                    <h3>증상탐지<a href="detect" class="button"><i class="bi bi-box-arrow-in-right"></i></a></h3>
                     <p>반려동물의 피부 질환 증상을 탐지할 수 있습니다.</p>
 
                 </div>
@@ -121,7 +131,7 @@
                 </div>
                 <div class="col-3 col-12-medium">
                     <span class="image fit"><img src="/static/images/hospital_page.jpeg" height="137" alt=""></span>
-                    <h3>병원 지도<a href="hospital" id="hospital" class="button"><i
+                    <h3>병원지도<a href="hospital" id="hospital" class="button"><i
                             class="bi bi-box-arrow-in-right"
                             onclick="loading()"></i></a></h3>
                     <p>전국의 동물 병원을 시각화한 지도로 주변 병원 위치 및 정보를 확인할 수 있습니다.</p>
@@ -141,10 +151,11 @@
     <!-- Footer -->
     <section id="footer">
         <ul class="icons">
-            <li><a href="https://github.com/YuYeJi-Project/Petom" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+            <li><a href="https://github.com/YuYeJi-Project/Petom" target="_blank"><i
+                    class="fa-brands fa-github fa-2x"></i></a></li>
         </ul>
         <ul class="copyright">
-            <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+            <li>Design: <a href="http://html5up.net/" target="_blank">HTML5 UP</a></li>
         </ul>
     </section>
 
@@ -154,6 +165,6 @@
     <script defer src="/static/js/breakpoints.min.js"></script>
     <script defer src="/static/js/util.js"></script>
     <script defer src="/static/js/main.js"></script>
-    <script defer src="/static/js/loading.js"></script>
+    <script defer src="/static/js/about.js"></script>
 
 {% endblock %}

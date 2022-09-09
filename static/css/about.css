@@ -43,7 +43,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #555;
+    color: black;
     line-height: 1em;
     margin: 0 0 1em 0;
 }
@@ -1894,7 +1894,7 @@ header.major {
 }
 
 header.major:after {
-    background: rgba(144, 144, 144, 0.5);
+    background: black;
     content: '';
     display: inline-block;
     height: 1px;
@@ -2256,7 +2256,7 @@ ul.major-icons li .icon:before {
 }
 
 .main.style2 header.major:after {
-    background: #ffffff;
+    background: black;
 }
 
 .main.style2 input[type="submit"],
@@ -2652,6 +2652,7 @@ body.is-preload #header:after {
     /* Two */
     #two {
         text-align: center;
+        padding-bottom: 0;
     }
 
 }

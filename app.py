@@ -2,7 +2,7 @@ import base64
 import io
 import torch
 from PIL import Image
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 import requests, json
 
 app = Flask(__name__, static_url_path='/static')
@@ -23,33 +23,29 @@ def about():
 @app.route('/detect', methods=['GET', 'POST'])
 def detect():
     if request.method == 'POST':
-        if 'file' not in request.files:
-            return 'File is missing', 404
 
         im_file = request.files['file']
+        if im_file != '':
+            im_bytes = im_file.read()
+            img = Image.open(io.BytesIO(im_bytes))
 
-        if im_file.filename == '':
-            return 'File is missing', 404
+            results = model(img)  # inference
 
-        im_bytes = im_file.read()
-        img = Image.open(io.BytesIO(im_bytes))
-
-        results = model(img)  # inference
-
-        results.ims  # array of original images (as np array) passed to model for inference
-        results.render()  # updates results.imgs with boxes and labels
-        for img in results.ims:  # 'JpegImageFile' -> bytes-like object
-            buffered = io.BytesIO()
-            img_base64 = Image.fromarray(img)
-            img_base64.save(buffered, format="JPEG")
-            encoded_img_data = base64.b64encode(buffered.getvalue()).decode(
-                'utf-8')  # base64 encoded image with results
-            return render_template('result.html', img_data=encoded_img_data)
+            results.ims  # array of original images (as np array) passed to model for inference
+            results.render()  # updates results.imgs with boxes and labels
+            for img in results.ims:  # 'JpegImageFile' -> bytes-like object
+                buffered = io.BytesIO()
+                img_base64 = Image.fromarray(img)
+                img_base64.save(buffered, format="JPEG")
+                encoded_img_data = base64.b64encode(buffered.getvalue()).decode(
+                    'utf-8')  # base64 encoded image with results
+                return render_template('result.html', img_data=encoded_img_data)
         else:
-            return 'Sorry, Detection was not handled properly', 404
+            abort(404)
 
     else:
         return render_template("detect.html")
+
 
 ############## 임시 ################
 @app.route("/result")
@@ -75,5 +71,10 @@ def hospital():
     return render_template("hospital.html", lat=location['lat'], lng=location['lng'])
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
