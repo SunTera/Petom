@@ -9,8 +9,8 @@
             <div class="col text-center">
                 <p>📍 바운딩 박스 형태 : 증상명 + 숫자
                     <br>📍 숫자는 Confidence로 확률을 의미하며 0부터 1 미만의 값을 가집니다
-                    <br>📍 탐지가 되지 않았어요 ➡️ Petom은 confidence 값이 0.4 이상인 경우에만 박스가 표시됩니다</p>
-                <p>예: erosion_ulcer 0.69 ➡️ 69%의 확률로 미란∙궤양 증상이라는 의미입니다.</p>
+                    <br>📍 탐지가 되지 않았어요 ➡️ Petom은 confidence 값이 0.25 이상인 경우에만 박스가 표시됩니다</p>
+                <p>🐾 예: erosion_ulcer 0.69 ➡️ 69%의 확률로 미란∙궤양 증상이라는 의미입니다.</p>
 
             </div>
         </div>
@@ -18,7 +18,8 @@
         <div class="row">
             <div class="col-md-6 result-col">
                 <p class="result-left">탐지 결과</p>
-                <img class="result-img" src="/static/results/{{ filename }}" alt="결과"></div>
+                <img class="result-img" src="data:image/jpeg;base64,{{ img_data }}" alt="결과">
+            </div>
             <div class="col-md-6 result-explanation">
                 <p class="result-right">결과 설명</p>
                 <img class="result-sample-img" src="/static/images/result_sample_eu.png" title="미란∙궤양 결과 샘플">

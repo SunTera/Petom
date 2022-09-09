@@ -153,6 +153,7 @@ body {
     vertical-align: .03em;
     width: 16px;
 }
+
 /*result page*/
 .result-img {
     width: 580px;
@@ -182,7 +183,6 @@ body {
     width: 105px;
     height: 118px;
     float: left;
-    display: inline-block;
     margin-right: 1rem;
 }
 
@@ -194,4 +194,10 @@ body {
     text-decoration: none;
     color: #969EA0;
     float: right;
+}
+
+#deck-container {
+    margin: 0 auto 1%;
+    width: 90vw;
+    height: 80vh;
 }
