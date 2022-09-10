@@ -47,12 +47,6 @@ def detect():
         return render_template("detect.html")
 
 
-############## 임시 ################
-@app.route("/result")
-def result():
-    return render_template("result.html")
-
-
 def current_location():
     here_req = requests.get("http://www.geoplugin.net/json.gp")
 
