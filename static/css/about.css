@@ -2043,8 +2043,12 @@ header.special {
 
 .image.fit img {
     width: 100%;
-}
+    height: 100%;
 
+}
+.image.fit.loading-img{
+    height: 32%;
+}
 /* Actions */
 
 ul.actions {

@@ -1,296 +1,302 @@
 /*폰트*/
 @font-face {
-    src: url("../fonts/GowunDodum-Regular.ttf");
-    font-family: "Gowun Dodum"
+  src: url("../fonts/GowunDodum-Regular.ttf");
+  font-family: "Gowun Dodum";
 }
 
 @font-face {
-    src: url("../fonts/Jua-Regular.ttf");
-    font-family: "Jua"
+  src: url("../fonts/Jua-Regular.ttf");
+  font-family: "Jua";
 }
 
 body {
-    font-size: 14pt;
+  font-size: 14pt;
 }
 
 /*전체 폰트 적용(fontawesome은 제외)*/
 *:not(i) {
-    font-family: "Gowun Dodum", "Jua";
+  font-family: "Gowun Dodum", "Jua";
 }
 
 /* nav */
 .navbar-brand {
-    margin-left: 4.2%;
+  margin-left: 4.2%;
 }
 
 .nav-item {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .fa-solid.fa-shield-dog {
-    margin-right: 5px;
-
+  margin-right: 5px;
 }
 
 /* about 페이지 */
 #aboutNav {
-    padding: 0;
-    background-color: white;
-    box-shadow: inset 0px 1px 0px #F7F7F8;
-
+  padding: 0;
+  background-color: white;
+  box-shadow: inset 0px 1px 0px #f7f7f8;
+}
+.about-header-icon {
+  width: 10%;
+  height:10%;
+  margin-bottom: 3%;
+}
+.dog-skin {
+  border-radius: 25px;
+  width: 100%;
+  height: 92%;
 }
 
-
 .top-button {
-    position: fixed;
-    bottom: 11%;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-    opacity: 0.5;
+  position: fixed;
+  bottom: 11%;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  opacity: 0.5;
 }
 
 .down-button {
-    position: fixed;
-    bottom: 5%;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-    opacity: 0.5;
+  position: fixed;
+  bottom: 5%;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  opacity: 0.5;
 }
 
+
+.giphy-logo{
+  width:16px;
+}
 /*content*/
 .contents {
-    margin: 30px auto;
-    text-align: center;
+  margin: 30px auto;
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
 .button {
-    justify-content: center;
+  justify-content: center;
 }
 
-
 .sample-label {
-    margin-top: 2%;
-    width: 40%;
-    height: 6%;
-    margin-bottom: 2%;
-    text-align: center;
-    background-color: #F7F6DC;
-    border-radius: 15px;
-    cursor: default;
-    font-size: 1em;
+  margin-top: 2%;
+  width: 40%;
+  height: 6%;
+  margin-bottom: 2%;
+  text-align: center;
+  background-color: #f7f6dc;
+  border-radius: 15px;
+  cursor: default;
+  font-size: 1em;
 }
 
 .sample-label.right {
-    margin-top: 2%;
-    width: 60%;
-    height: 6%;
-    margin-bottom: 2%;
-    text-align: center;
-    background-color: #EEEEEE;
-    border-radius: 15px;
-    cursor: default;
-
+  margin-top: 2%;
+  width: 60%;
+  height: 6%;
+  margin-bottom: 2%;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 15px;
+  cursor: default;
 }
 
 .sample-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 2%;
+  width: 200px;
+  height: 200px;
+  margin-right: 2%;
 }
 
 .form-control {
-    margin-left: 100px;
-    width: 75%;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .submit-btn {
-    margin-top: 2%;
-    display: inline-block;
+  margin-top: 2%;
+  display: inline-block;
 }
 
-.col-md-6.detect, .col-md-6.result-col {
-    text-align: center;
+.col-md-6.detect,
+.col-md-6.result-col {
+  text-align: center;
 }
 
 /*로딩 화면*/
 #load {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-    background: white;
-    position: fixed;
-    text-align: center;
-    z-index: 1000; /* 이 값으로 레이어의 위치를 조정합니다. */
-
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background: white;
+  position: fixed;
+  text-align: center;
+  z-index: 1000; /* 이 값으로 레이어의 위치를 조정합니다. */
 }
 
 #load > img {
-    top: 50%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
 }
 
 /*logo*/
-.bi.bi-arrow-up-right, .bi.bi-box-arrow-up-right {
-    font-size: 0.7rem;
-    vertical-align: .425em;
-    margin-left: 0.1rem
+.bi.bi-arrow-up-right,
+.bi.bi-box-arrow-up-right {
+  font-size: 0.7rem;
+  vertical-align: 0.425em;
+  margin-left: 0.1rem;
 }
 
-
 .giphy-logo {
-    vertical-align: .03em;
-    width: 16px;
+  vertical-align: 0.03em;
+  width: 1rem;
 }
 
 /*result page*/
 .result-img {
-    width: 580px;
-    height: 580px;
+  width: 580px;
+  height: 580px;
 }
 
 .result-left {
-    width: 50%;
-    text-align: center;
-    background-color: #F7F6DC;
-    border-radius: 15px;
-    margin: 0 auto 2%;
-
+  width: 50%;
+  text-align: center;
+  background-color: #f7f6dc;
+  border-radius: 15px;
+  margin: 0 auto 2%;
 }
 
 .result-right {
-    width: 50%;
-    text-align: center;
-    background-color: #EEEEEE;
-    border-radius: 15px;
-    margin: 0 auto 2%;
-
-
+  width: 50%;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 15px;
+  margin: 0 auto 2%;
 }
 
 .result-sample-img {
-    width: 105px;
-    height: 118px;
-    float: left;
-    margin-right: 1rem;
+  width: 105px;
+  height: 118px;
+  float: left;
+  margin-right: 1rem;
 }
 
 .paragraph {
-    margin-right: 10%;
+  margin-right: 10%;
 }
 
 .paragraph a {
-    text-decoration: none;
-    color: #969EA0;
-    float: right;
+  text-decoration: none;
+  color: #969ea0;
+  float: right;
 }
 
 #deck-container {
-    margin: 0 auto 1%;
-    width: 90vw;
-    height: 80vh;
+  margin: 0 auto 1%;
+  width: 90vw;
+  height: 80vh;
 }
 
 /*404 page*/
 .clearfix:before,
 .clearfix:after {
-    display: table;
-    content: ' ';
+  display: table;
+  content: " ";
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .page-404 .outer {
-    position: absolute;
-    top: 0;
-    background: #f0f0f0 !important;
-    display: table;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  background: #f0f0f0 !important;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
 .page-404 .outer .middle {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .page-404 .outer .middle .inner {
-    width: 300px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page-404 .outer .middle .inner .inner-circle {
-    height: 300px;
-    border-radius: 50%;
-    background-color: #ffffff;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .page-404 .outer .middle .inner .inner-circle:hover i {
-    color: #39bbdb !important;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 0 15px #39bbdb;
+  color: #39bbdb !important;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 0 15px #39bbdb;
 }
 
 .page-404 .outer .middle .inner .inner-circle:hover span {
-    color: #39bbdb;
+  color: #39bbdb;
 }
 
 .page-404 .outer .middle .inner .inner-circle i {
-    font-size: 5em;
-    line-height: 1em;
-    float: right;
-    width: 1.6em;
-    height: 1.6em;
-    margin-top: -.7em;
-    margin-right: -.5em;
-    padding: 20px;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-    text-align: center;
-    color: #f5f5f5 !important;
-    border-radius: 50%;
-    background-color: #39bbdb;
-    box-shadow: 0 0 0 15px #f0f0f0;
+  font-size: 5em;
+  line-height: 1em;
+  float: right;
+  width: 1.6em;
+  height: 1.6em;
+  margin-top: -0.7em;
+  margin-right: -0.5em;
+  padding: 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-align: center;
+  color: #f5f5f5 !important;
+  border-radius: 50%;
+  background-color: #39bbdb;
+  box-shadow: 0 0 0 15px #f0f0f0;
 }
 
 .page-404 .outer .middle .inner .inner-circle span {
-    font-size: 11em;
-    font-weight: 700;
-    line-height: 1.2em;
-    display: block;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-    text-align: center;
-    color: #e0e0e0;
+  font-size: 11em;
+  font-weight: 700;
+  line-height: 1.2em;
+  display: block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-align: center;
+  color: #e0e0e0;
 }
 
 .page-404 .outer .middle .inner .inner-status {
-    font-size: 20px;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    text-align: center;
-    color: #39bbdb;
+  font-size: 20px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #39bbdb;
 }
 
 .page-404 .outer .middle .inner .inner-detail {
-    line-height: 1.4em;
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #999999;
+  line-height: 1.4em;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #999999;
 }
