@@ -7,7 +7,7 @@ import requests, json
 
 app = Flask(__name__, static_url_path='/static')
 
-model = torch.hub.load('yolov5', 'custom', path='yolov5/petom_weights.pt', source='local')  # local repo
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='models_train/petom_weights.pt', force_reload=True)
 
 
 @app.route('/')
@@ -29,7 +29,7 @@ def detect():
             im_bytes = im_file.read()
             img = Image.open(io.BytesIO(im_bytes))
 
-            results = model(img)  # inference
+            results = model(img, size=640)  # inference
 
             results.ims  # array of original images (as np array) passed to model for inference
             results.render()  # updates results.imgs with boxes and labels
@@ -71,4 +71,4 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, threaded=True)
