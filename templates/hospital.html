@@ -6,8 +6,6 @@
     <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.5.*/dist/index.js'></script>
     <link rel="stylesheet" href="/static/css/style.css">
 
-    <input type="hidden" id="lat" value="{{ lat }}">
-    <input type="hidden" id="lng" value="{{ lng }}">
 
     <div class="grid text-center">
         <div class="row">
@@ -25,10 +23,6 @@
     <script>
         let latitude = 37.565
         let longitude = 126.986
-        if ((document.getElementById("lat").value !== null) && (document.getElementById("lng").value !== null)) {
-            latitude = Number(document.getElementById("lat").value);
-            longitude = Number(document.getElementById("lng").value);
-        }
 
         const jsonInput = {
 
