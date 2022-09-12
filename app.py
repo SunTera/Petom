@@ -57,22 +57,10 @@ def result():
     return render_template("result.html")
 
 
-def current_location():
-    here_req = requests.get("http://www.geoplugin.net/json.gp")
-
-    if (here_req.status_code != 200):
-        return {'lat': None, 'lng': None}
-    else:
-        location = json.loads(here_req.text)
-        crd = {"lat": str(location["geoplugin_latitude"]), "lng": str(location["geoplugin_longitude"])}
-
-    return crd
-
 
 @app.route('/hospital')
 def hospital():
-    location = current_location()
-    return render_template("hospital.html", lat=location['lat'], lng=location['lng'])
+    return render_template("hospital.html")
 
 
 if __name__ == '__main__':
