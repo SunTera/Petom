@@ -16,7 +16,7 @@
 
 ### 웹사이트 링크
 
-- url : [www.petom.site]((http://www.petom.site)
+- url : [www.petom.site](http://www.petom.site)
 
 ---
 
