@@ -28,8 +28,14 @@
 
 3. 병원지도   
 <img src="https://user-images.githubusercontent.com/67316314/189904236-bf8f6ae7-c709-4c52-8cd0-71fad4d2c10e.gif" width="30%"/>   
-> 전국 동물병원을 시각화한 지도를 통해 병원의 주소와 전화번호를 확인할 수 있습니다.
-  
+
+|                        |  | 
+| --------------- | -----------  |
+| 경로  | [/templates/hospital.html](https://github.com/YuYeJi-Project/Petom/blob/main/templates/hospital.html)|
+| URL   | /hospital  |
+| 역할            | 전국 동물병원을 시각화한 지도를 통해 병원의 주소와 전화번호를 확인할 수 있습니다.|
+
+
 ## 데이터 출처
 
 - 질환 분석
