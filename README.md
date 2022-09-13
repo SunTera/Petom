@@ -19,7 +19,7 @@
 - 증상탐지∙결과
 
 - 병원지도
-
+![병원지도](https://user-images.githubusercontent.com/67316314/189904236-bf8f6ae7-c709-4c52-8cd0-71fad4d2c10e.gif)
 ## 데이터 출처
 
 - 질환 분석
