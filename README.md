@@ -14,13 +14,21 @@
 
 ## 페이지 구성
 
-- About Page
+1. About Page
+<img src="https://user-images.githubusercontent.com/67316314/189915868-48d07786-6033-495e-932e-cf21669435ee.gif" width="30%"/>   
+|                        |  | 
+| --------------- | -----------  |
+| 경로  | [/templates/about.html](https://github.com/YuYeJi-Project/Petom/blob/main/templates/about.html)|
+| URL   | /, /about  |
+| 역할            | Petom에서 사용한 알고리즘과 기대효과, 페이지 구성을 확인할 수 있습니다.|
 
-- 증상탐지∙결과
 
-- 병원지도   
-<img src="https://user-images.githubusercontent.com/67316314/189904236-bf8f6ae7-c709-4c52-8cd0-71fad4d2c10e.gif" width="30%" height="30%"/>
+2. 증상탐지∙결과
 
+3. 병원지도   
+<img src="https://user-images.githubusercontent.com/67316314/189904236-bf8f6ae7-c709-4c52-8cd0-71fad4d2c10e.gif" width="30%"/>   
+> 전국 동물병원을 시각화한 지도를 통해 병원의 주소와 전화번호를 확인할 수 있습니다.
+  
 ## 데이터 출처
 
 - 질환 분석
