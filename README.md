@@ -22,6 +22,8 @@
 
 ## 아키텍처
 
+<img src="https://user-images.githubusercontent.com/67316314/189929257-e99e8e8f-cb90-4505-b659-d9c95c194023.png"/>   
+
 ---
 
 ## 페이지 구성
