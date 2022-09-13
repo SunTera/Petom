@@ -1,16 +1,28 @@
-# :feet: Petom :feet:
+# <img src="https://user-images.githubusercontent.com/67316314/189922152-a9327fb4-ca56-4a21-aba4-d71386d67117.svg" width="30"> Petom 
 
-[www.petom.site](www.petom.site)
+반려동물의 피부사진으로 질병을 **탐지**하여 가능성 있는 증상을 알려주는 웹 프로그램입니다.   
 
-> - 반려동물의 피부사진으로 질병을 **탐지**하여 가능성 있는 증상을 알려주는 웹 프로그램입니다.
-> - 반려동물의 피부질환이 의심되는 경우 보호자가 직접 찍은 이미지로 피부질환을 **탐지**하여 질환 목록을 안내하고 전문병원 치료가 필요하다고 판단할 경우 보호자가 거주 지역 주변의 동물병원을 전국 병원 지도를 통해 조기치료로 연계할 수 있는 서비스를 제공합니다.
+반려동물의 피부질환이 의심되는 경우 보호자가 직접 찍은 이미지로 피부질환을 **탐지**하여 질환 목록을 안내하고 전문병원 치료가 필요하다고 판단할 경우 보호자가 거주 지역 주변의 동물병원을 전국 병원 지도를 통해 조기치료로 연계할 수 있는 서비스를 제공합니다.
 
-- 주기능
 
-  1. 반려동물의 피부 사진을 분석해 어떤 증상인지 알려준다. (증상 탐지)
-  2. 결과를 확인한 유저가 주변 동물병원의 위치정보를 지도로 확인할 수 있다. (병원 지도)
+1. 반려동물의 피부 사진을 분석해 어떤 증상인지 확인할 수 있습니다. 
+2. 결과를 확인한 유저가 주변 동물병원의 위치정보를 지도로 확인할 수 있습니다.
+  
+  ---
+
+## 소개 영상
+
+[![YoutubeVideo](이미지 썸네일.jpg)](유튜브 주소) -- 추가
+
+### 웹사이트 링크
+
+- url : [www.petom.site](www.petom.site)
+
+---
 
 ## 아키텍처
+
+---
 
 ## 페이지 구성
 
@@ -35,15 +47,16 @@
 | URL   | /hospital  |
 | 역할            | 전국 동물병원을 시각화한 지도를 통해 병원의 주소와 전화번호를 확인할 수 있습니다.|
 
+---
 
 ## 데이터 출처
 
-- 질환 분석
+- 반려동물 피부 질환 이미지
 
   > AiHub [반려동물 피부 질환](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=561)
 
-- 동물병원 리스트
-  > 공공데이터포털 [동물병원 현황 데이터](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=TOTAL&keyword=%EB%8F%99%EB%AC%BC%EB%B3%91%EC%9B%90&detailKeyword=&publicDataPk=&recmSe=&detailText=&relatedKeyword=&commaNotInData=&commaAndData=&commaOrData=&must_not=&tabId=&dataSetCoreTf=&coreDataNm=&sort=&relRadio=&orgFullName=&orgFilter=&org=&orgSearch=&currentPage=1&perPage=10&brm=&instt=&svcType=&kwrdArray=&extsn=&coreDataNmArray=&pblonsipScopeCode=)를 통해 위치, 전화번호, 운영 여부 등을 추출할 예정
+- 전국 동물병원 리스트
+  > 공공데이터포털 [동물병원 현황 데이터](https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=TOTAL&keyword=%EB%8F%99%EB%AC%BC%EB%B3%91%EC%9B%90&detailKeyword=&publicDataPk=&recmSe=&detailText=&relatedKeyword=&commaNotInData=&commaAndData=&commaOrData=&must_not=&tabId=&dataSetCoreTf=&coreDataNm=&sort=&relRadio=&orgFullName=&orgFilter=&org=&orgSearch=&currentPage=1&perPage=10&brm=&instt=&svcType=&kwrdArray=&extsn=&coreDataNmArray=&pblonsipScopeCode=)
 
 ---
 
@@ -78,6 +91,8 @@
    > \- feature : 새로운 기능
    >
    > \- test : 테스트 추가
+   
+---
 
 ## 역할 분담
 
