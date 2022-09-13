@@ -33,7 +33,7 @@
 
 |                        |  | 
 | --------------- | -----------  |
-| 경로  | [/templates/about.html](https://github.com/YuYeJi-Project/Petom/blob/main/templates/about.html)|
+| 경로  | [/templates/about.html](https://github.com/SunTera/Petom/blob/main/templates/about.html)|
 | URL   | /, /about  |
 | 역할            | Petom에서 사용한 알고리즘과 기대효과, 페이지 구성을 확인할 수 있습니다.|
 
@@ -45,7 +45,7 @@
 
 |                        |  | 
 | --------------- | -----------  |
-| 경로  | [/templates/hospital.html](https://github.com/YuYeJi-Project/Petom/blob/main/templates/hospital.html)|
+| 경로  | [/templates/hospital.html](https://github.com/SunTera/Petom/blob/main/templates/hospital.html)|
 | URL   | /hospital  |
 | 역할            | 전국 동물병원을 시각화한 지도를 통해 병원의 주소와 전화번호를 확인할 수 있습니다.|
 
@@ -100,6 +100,6 @@
 
 | 이름                                       | 역할                                  |
 | ------------------------------------------ | ------------------------------------- |
-| [홍유리](https://github.com/teraglass)(PM) | 웹페이지 구현, 배포(Flask, AWS)       |
+| [홍유리](https://github.com/teraglass) | 웹페이지 구현, 배포(Flask, AWS)       |
 | [양지선](https://github.com/Sunnnyyy16)    | 데이터분석, 전국 동물병원 지도 시각화 |
-| [김예은](https://github.com/kimyeun)       | AI모델개발                            |
+
