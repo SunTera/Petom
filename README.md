@@ -16,6 +16,7 @@
 
 1. About Page
 <img src="https://user-images.githubusercontent.com/67316314/189915868-48d07786-6033-495e-932e-cf21669435ee.gif" width="30%"/>   
+
 |                        |  | 
 | --------------- | -----------  |
 | 경로  | [/templates/about.html](https://github.com/YuYeJi-Project/Petom/blob/main/templates/about.html)|
