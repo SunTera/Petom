@@ -59,6 +59,8 @@ Petom은 동물병원 방문이 어려운 보호자들이 반려동물의 피부
 
 2. 증상탐지∙결과
 
+<img src="https://user-images.githubusercontent.com/98167266/190056565-5f7b3c41-8701-4726-bb1c-8125c4af75af.gif" width="30%"/>
+
 |                        |  | 
 | --------------- | -----------  |
 | 경로 (증상탐지) | [/templates/detect.html](https://github.com/SunTera/Petom/blob/main/templates/detect.html)|
