@@ -3,7 +3,7 @@
 ## 주제 선정 이유와 개발 목표
 
 
-<img src="https://user-images.githubusercontent.com/67316314/190043543-804e79b1-4de9-4edb-90a7-478688912953.jpeg" title="">
+<img src="https://user-images.githubusercontent.com/67316314/190043543-804e79b1-4de9-4edb-90a7-478688912953.jpeg" title="반려견이 동물병원을 찾는 주요 원인- 20위권">
 
 1인 가구 확대로 반려동물을 키우는 가구수가 증가하면서 인공지능을 활용한 펫테크 산업의 성장이 가속화 되고 있습니다. 반려동물 관련 상품과 케어와 관련된 산업 뿐만 아니라 반려동물의 질병과 관리에 보호자들의 관심이 커지고 있습니다.
 2018년 농촌진흥청은 반려견의 동물병원 내원 중 예방 접종 외에 가장 큰 원인으로 피부염·습진이라고 발표했습니다. [(출처)](https://www.nias.go.kr/front/soboarddown.do?cmCode=M090814150850297&boardSeqNum=3478&fileSeqNum=2323)
